@@ -1,20 +1,23 @@
 package main
 
 import "fmt"
-import "models"
 
-m
-
+type Course struct {
+	Name    string
+	Price   float64
+	IsFree  bool
+	UserIDs []uint
+	Classes map[uint]string
+}
 
 func (c Course) PrintClasses() {
 	text := "Las Clases son: "
-	for _,class := range c.Classes {
+	for _, class := range c.Classes {
 		text += class + ", "
 	}
 
 	fmt.Println(text[:len(text)-2])
 }
-
 
 func main() {
 	Go := Course{
@@ -29,10 +32,10 @@ func main() {
 		},
 	}
 
-	Css:= Course{Name: "Css desde cero",IsFree: true,}
+	Css := Course{Name: "Css desde cero", IsFree: true}
 	js := Course{}
 	js.Name = "Curso JS"
-	js.UserIDs = []uint {12, 67}
+	js.UserIDs = []uint{12, 67}
 
 	fmt.Printf("%+v\n", Css)
 
