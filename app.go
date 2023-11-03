@@ -3,7 +3,7 @@ package main
 import "fmt"
 import "models"
 
-
+m
 
 
 func (c Course) PrintClasses() {
